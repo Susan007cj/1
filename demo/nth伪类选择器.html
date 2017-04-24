@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+nth-of-type  选择同类型的第几个元素
+first-of-type 选择同类型的第一个元素
+last-of-type 选择同类型的最后一个元素
+*/
+        /*他表示第一个first-child(1)*/
+        /*因为这里的第一个是h2所以他就不会显示所以红色就会无效*/
+        /*如果我们把h2换成p那他就会显示le */
+        div h2:nth-child(1){  background: #ff0000;  }
+        div p:nth-of-type(1){  background: #00ff00;  }
+        /*指定父元素的最后一个 p 元素的背景色：*/
+        div p:last-of-type{  background: #0000ff;  }
+        /* :last-of-type 选择器匹配属于其父元素的特定类型的最后一个子元素的每个元素。等同于 :nth-last-of-type(1)*/
+        div p:nth-last-of-type(2){  background: #ff3fff;  }
+    </style>
+</head>
+<body>
+
+<div>
+    <h2>111</h2>
+    <p>222</p>
+    <p>333</p>
+    <p>444</p>
+    <p>555</p>
+</div>
+</body>
+</html>
